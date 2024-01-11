@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}

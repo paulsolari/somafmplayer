@@ -1,0 +1,27 @@
+@use 'sass:map';
+
+$wbp: (
+	'xxs': 320px,
+	'xs': 480px,
+	'sm': 768px,
+	'md': 1024px,
+	'lg': 1280px,
+	'xl': 1440px,
+);
+
+$mq-list: (
+	'only-width-sm': #{'(#{map.get($wbp, "xs")} < width <= #{map.get($wbp, "sm")})'},
+	'only-width-md': #{'(#{map.get($wbp, "sm")} < width <= #{map.get($wbp, "md")})'},
+	'only-width-lg': #{'(#{map.get($wbp, "md")} < width <= #{map.get($wbp, "lg")})'},
+	'only-width-xl': #{'(#{map.get($wbp, "lg")} < width <= #{map.get($wbp, "xl")})'},
+	'max-width-xs': #{'(width <= #{map.get($wbp, "xs")})'},
+	'max-width-sm': #{'(width <= #{map.get($wbp, "sm")})'},
+	'max-width-md': #{'(width <= #{map.get($wbp, "md")})'},
+	'max-width-lg': #{'(width <= #{map.get($wbp, "lg")})'},
+	'max-width-xl': #{'(width <= #{map.get($wbp, "xl")})'},
+	'min-width-xs': #{'(width > #{map.get($wbp, "xxs")})'},
+	'min-width-sm': #{'(width > #{map.get($wbp, "xs")})'},
+	'min-width-md': #{'(width > #{map.get($wbp, "sm")})'},
+	'min-width-lg': #{'(width > #{map.get($wbp, "md")})'},
+	'min-width-xl': #{'(width > #{map.get($wbp, "lg")})'},
+);

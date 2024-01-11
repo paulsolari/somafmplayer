@@ -1,0 +1,80 @@
+// https://github.com/import-js/eslint-plugin-import
+// https://github.com/import-js/eslint-import-resolver-typescript
+// https://github.com/johvin/eslint-import-resolver-alias
+// https://github.com/lydell/eslint-plugin-simple-import-sort
+module.exports = {
+	plugins: ['import', 'simple-import-sort'],
+	settings: {
+		'import/extensions': ['.js', '.cjs', '.mjs', '.jsx', '.ts', '.cts', '.mts', '.tsx'],
+		'import/external-module-folders': ['node_modules', 'node_modules/@types'],
+		'import/parsers': {
+			'@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
+		},
+		'import/resolver': {
+			typescript: {
+				alwaysTryTypes: true,
+				project: './tsconfig.app.json',
+			},
+			node: {
+				extensions: ['.js', '.cjs', '.mjs', '.jsx', '.ts', '.cts', '.mts', '.tsx'],
+			},
+			alias: {
+				map: [
+					['@', './src/'],
+					['#imports', '.nuxt/imports.d.ts'],
+				],
+			},
+		},
+	},
+	rules: {
+		'import/export': 'error',
+		'import/no-deprecated': 'off',
+		'import/no-empty-named-blocks': 'error',
+		'import/no-extraneous-dependencies': 'off',
+		'import/no-mutable-exports': 'error',
+		'import/no-named-as-default': 'error',
+		'import/no-named-as-default-member': 'error',
+		'import/no-unused-modules': 'off',
+		'import/no-amd': 'off',
+		'import/no-commonjs': 'off',
+		'import/no-import-module-exports': 'off',
+		'import/no-nodejs-modules': 'off',
+		'import/unambiguous': 'off',
+		'import/default': 'error',
+		'import/named': 'off',
+		'import/namespace': 'error',
+		'import/no-absolute-path': 'error',
+		'import/no-cycle': 'off',
+		'import/no-dynamic-require': 'off',
+		'import/no-internal-modules': 'off',
+		'import/no-relative-packages': 'error',
+		'import/no-relative-parent-imports': ['error', { ignore: ['@'] }],
+		'import/no-restricted-paths': 'off',
+		'import/no-self-import': 'error',
+		'import/no-unresolved': ['error', { ignore: ['\\?.+'] }],
+		'import/no-useless-path-segments': ['error', { noUselessIndex: true }],
+		'import/no-webpack-loader-syntax': 'off',
+		'import/consistent-type-specifier-style': 'off',
+		'import/dynamic-import-chunkname': 'off',
+		'import/exports-last': 'error',
+		'import/extensions': 'off',
+		'import/first': 'error',
+		'import/group-exports': 'off',
+		'import/max-dependencies': 'off',
+		'import/newline-after-import': 'warn',
+		'import/no-anonymous-default-export': 'off',
+		'import/no-default-export': 'off',
+		'import/no-duplicates': ['error', { considerQueryString: true }],
+		'import/no-named-default': 'error',
+		'import/no-named-export': 'off',
+		'import/no-namespace': 'error',
+		'import/no-unassigned-import': ['error', { allow: ['**/*.{css,scss}'] }],
+		'import/order': 'off',
+		'import/prefer-default-export': 'off',
+		'simple-import-sort/exports': 'warn',
+		'simple-import-sort/imports': [
+			'warn',
+			{ groups: [['^\\u0000', '^node:', '^@?\\w', '^', '^\\.']] },
+		],
+	},
+};

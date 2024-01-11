@@ -1,0 +1,11 @@
+@use 'sass:map';
+
+@function map-collect($maps...) {
+	$collection: ();
+
+	@each $item in $maps {
+		$collection: map.merge($collection, $key: $item);
+	}
+
+	@return $collection;
+}

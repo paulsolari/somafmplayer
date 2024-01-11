@@ -1,0 +1,28 @@
+@use 'sass:map';
+
+@mixin media($query) {
+	@if map.has-key($mq-list, $query) {
+		@media #{map.get($mq-list, $query)} {
+			@content;
+		}
+	} @else {
+		@media #{$query} {
+			@content;
+		}
+	}
+}
+
+@mixin hover {
+	@media (hover: hover) {
+		/* stylelint-disable-next-line */
+		&:hover {
+			@content;
+		}
+	}
+
+	@media (hover: none) {
+		&:active {
+			@content;
+		}
+	}
+}

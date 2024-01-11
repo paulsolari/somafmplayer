@@ -1,0 +1,23 @@
+{
+	"root": true,
+	"elements": ["html5"],
+	"extends": [
+		"html-validate:recommended",
+		"html-validate-vue:recommended",
+		"html-validate:prettier"
+	],
+	"plugins": ["html-validate-vue"],
+	"transform": {
+		"^.*\\.vue$": "html-validate-vue"
+	},
+	"rules": {
+		"element-case": ["error", { "style": ["lowercase", "pascalcase"] }],
+		"element-name": ["error", { "pattern": "^[A-Z][a-zA-Z]*[A-Z][a-zA-Z]*$" }],
+		"no-trailing-whitespace": "off",
+		"no-inline-style": "off",
+		"no-autoplay": "off",
+		"attr-pattern": ["error", { "pattern": "[a-z0-9-:@#]+", "ignoreForeign": true }],
+		"class-pattern": ["error", { "pattern": "kebabcase" }],
+		"id-pattern": ["error", { "pattern": "kebabcase" }]
+	}
+}

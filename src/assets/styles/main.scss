@@ -1,0 +1,36 @@
+@import './reset';
+@import './fonts';
+@import './icons';
+
+body {
+	font: 400 1rem / 1.2 $font-family;
+	letter-spacing: $letter-spacing;
+	color: hsl(0deg 0% 0%);
+	background: $background;
+
+	@include media(max-width-sm) {
+		background: $color-primary;
+	}
+}
+
+#app {
+	height: 100dvh;
+
+	::-webkit-scrollbar {
+		width: 1.0625rem;
+	}
+
+	::-webkit-scrollbar-track {
+		background: rgba(255 255 255 / 0.05);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgba(255 255 255 / 0.05);
+	}
+
+	@-moz-document url-prefix() {
+		* {
+			scrollbar-color: rgba(255 255 255 / 0.05) rgba(255 255 255 / 0.05);
+		}
+	}
+}

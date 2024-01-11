@@ -1,0 +1,17 @@
+{
+	"extends": "@vue/tsconfig/tsconfig.dom.json",
+	"include": ["src/**/*.ts", "src/**/*.vue"],
+	"compilerOptions": {
+		"composite": true,
+		"noEmit": true,
+		"baseUrl": ".",
+		"paths": { "@/*": ["./src/*"] },
+		"types": ["vite/client"],
+		"strict": true,
+		"verbatimModuleSyntax": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true,
+		"forceConsistentCasingInFileNames": true
+	}
+}

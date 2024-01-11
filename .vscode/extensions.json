@@ -1,0 +1,14 @@
+{
+	"recommendations": [
+		"Vue.volar",
+		"Vue.vscode-typescript-vue-plugin",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"stylelint.vscode-stylelint",
+		"html-validate.vscode-html-validate",
+		"EditorConfig.EditorConfig",
+		"vivaxy.vscode-conventional-commits",
+		"cipchk.cssrem"
+	],
+	"unwantedRecommendations": ["octref.vetur", "vscode.typescript-language-features"]
+}

@@ -1,0 +1,31 @@
+@use 'sass:color';
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-family: 'Roboto', sans-serif;
+$font-size-xs: 0.625rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1.125rem;
+$font-size-lg: 1.375rem;
+$font-size-xl: 1.625rem;
+$font-size-title: 3.75rem;
+$font-size-subtitle: 2.8125rem;
+$line-height: 1.2;
+$letter-spacing: 0.03em;
+
+$color-primary: hsl(220deg 28% 37%);
+$color-primary-dark-1: color.adjust($color-primary, $lightness: -5%);
+$color-primary-dark-2: color.adjust($color-primary, $lightness: -10%);
+$color-primary-light-1: color.adjust($color-primary, $lightness: 5%);
+$color-primary-light-2: color.adjust($color-primary, $lightness: 10%);
+$color-secondary: hsl(220deg 52% 80%);
+$color-secondary-dark-1: color.adjust($color-secondary, $lightness: -5%);
+$color-secondary-dark-2: color.adjust($color-secondary, $lightness: -10%);
+$color-secondary-light-1: color.adjust($color-secondary, $lightness: 5%);
+$color-secondary-light-2: color.adjust($color-secondary, $lightness: 10%);
+$color-tertiary: hsl(0deg 73% 72%);
+
+$background: linear-gradient(115deg, hsl(212deg 69% 84%), hsl(332deg 61% 89%) 100%) no-repeat;
+$box-shadow: 0 0 0.3125rem color-mix(in hsl, hsl(0deg 0% 0%) 80%, transparent);
+$border-radius: 0.3125rem;
+$transition-duration: 0.3s;

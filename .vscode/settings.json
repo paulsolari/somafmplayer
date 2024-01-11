@@ -1,0 +1,15 @@
+{
+	"css.validate": false,
+	"scss.validate": false,
+	"stylelint.validate": ["css", "scss", "vue"],
+	"stylelint.snippet": ["css", "scss", "postcss"],
+	"html-validate.validate": ["html", "vue", "vue-html"],
+	"eslint.validate": ["javascript", "typescript", "vue"],
+	"eslint.probe": ["javascript", "typescript", "vue"],
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.stylelint": "explicit"
+	},
+	"typescript.tsdk": "node_modules/typescript/lib"
+}
